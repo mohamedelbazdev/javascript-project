@@ -188,8 +188,8 @@ nav .navbar .icon-nav ul a:hover li {
   box-sizing: border-box;
   height: 500px;
   padding: 50px;
-  float: left;
-  margin: 0px 25px 50px;
+  /* float: left; */
+  margin: 0px 25px;
   border-radius: 3px;
   position: relative;
   cursor: pointer;
@@ -209,19 +209,18 @@ nav .navbar .icon-nav ul a:hover li {
   font-family: myBoldFont;
 }
 
-.card div:hover button {
-  visibility: visible;
+.card .item-container {
+  position: relative;
+  float: left;
 }
 
 /* Button Add To Cart */
-.card div button {
+.card .item-container #add-to-cart {
   transition: all 0.3s ease-in-out;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
+  position: relative;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.541);
-  width: 100%;
+  width: 397px;
   text-align: center;
   padding: 15px;
   font-size: 16px;
@@ -229,8 +228,9 @@ nav .navbar .icon-nav ul a:hover li {
   border-radius: 0 0 3px 3px;
   border: none;
   outline: none;
-  visibility: hidden;
   cursor: pointer;
+  margin-bottom: 50px;
+  margin-left: 25px;
 }
 
 /* Fort Awsome Icon */

@@ -188,7 +188,7 @@ var addToCarts = document.querySelectorAll("#add-to-cart");
 var cart = document.getElementById("cart");
 
 // click event to display cart page
-// cart.addEventListener("click", displayCart);
+cart.addEventListener("click", displayCart);
 
 var carts = document.getElementById("carts");
 
@@ -198,7 +198,7 @@ carts.addEventListener("click", () => addToCart(getId));
 var home = document.getElementById("logo");
 
 //click event to hide cart page and return to home page
-// home.addEventListener("click", hideCart);
+home.addEventListener("click", hideCart);
 
 //events on dynamically created element to remove items from list
 document.addEventListener("click", function (e) {
@@ -291,6 +291,7 @@ function addItem() {
   totalAmount = 0;
   totalItems = 0;
   totalSaving = 0;
+
   var clrNode = document.getElementById("item-body");
   clrNode.innerHTML = "";
   console.log(clrNode.childNodes);
