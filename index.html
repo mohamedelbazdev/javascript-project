@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css file -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/styleslide.css" />
+    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+     <!-- font awesome icon -->
+     <link
+          rel="stylesheet"
+          href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+        />
+    <title>JavaScript Project</title>
+</head>
+
+<body>
+
+
+     <!-- Header -->
+     <header>
+        <div class="head-UP">
+          <div class="left">
+            <div class="img-head">
+              <img
+                src="images/icons/flog/flag-egypt-realistic-waving-arab-republic-fabric-textured-flowing-124683837.jpg"
+                alt=""
+              />
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="images/icons/flog/syria-national-fabric-flag-textile-background-symbol-international-asian-arab-world-country-syrian-state-official-sign-syria-159249141.jpg"
+                      alt="" /></a
+                  >syria
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="images/icons/flog/national-flag-united-arab-emirates-260nw-2140012259.jpg"
+                      alt="" /></a
+                  >emirate
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="images/icons/flog/palestinian-flag-based-on-arab-260nw-230466904.jpg"
+                      alt="" /></a
+                  >palestin
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="images/icons/flog/pngtree-saudi-arab-flag-background-independence-day-image_398242.jpg"
+                      alt="" /></a
+                  >saudi
+                </li>
+                <li>
+                  <a href="#"><img src="images/icons/flog/1-99.jpg" alt="" /></a
+                  >country
+                </li>
+              </ul>
+            </div>
+            <div class="leng">
+              <a href="#">English</a>
+              <ul>
+                <a href="#"><li>English</li></a>
+                <a href="#"><li>عربي</li></a>
+              </ul>
+            </div>
+          </div>
+          <div class="rihgt">
+            <div class="icon-1">
+                <i class="fa fa-truck" aria-hidden="true"></i>
+                 <a href="#">Fast Delivery and Return</a>
+            </div>
+            <div class="icon-2">
+              <i class="fa fa-first-order" aria-hidden="true"></i>
+
+              <a href="#">100% Genuine Brands</a>
+            </div>
+            <div class="icon-3">
+                <i class="fa fa-repeat" aria-hidden="true"></i>
+              <a href="#">Free Delivery</a>
+            </div>
+          </div>
+        </div>
+        <!-- NavBar -->
+        <nav>
+          <div class="navbar">
+            <div class="list">
+              <ul>
+                <li><a href="#">Unisex</a></li>
+                <li><a href="#">Women's</a></li>
+                <li><a href="#">Men's</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Clothes</a></li>
+              </ul>
+            </div>
+            <div class="logo">
+              <img src="images/icons/logo-745x167.png" alt="" />
+            </div>
+  
+            <div class="icon-nav">
+
+                <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i>
+                </a>
+
+              <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+              <span class="counterItem">0</span>
+            </div>
+          </div>
+        </nav>
+  
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width & height images with number and caption text -->
+          <div class="mySlides fade">
+            <img
+              src="./images/169F1F8ED-923E-4540-9E4D-37DB37448CE5-1280x690.jpeg"
+              style="width: 100%"
+            />
+          </div>
+  
+          <div class="mySlides fade">
+            <img
+              src="./images/3FB51981C-4AF8-4F25-8E7E-F95144C703A2-1280x690.jpeg"
+              style="width: 100%"
+            />
+          </div>
+  
+          <div class="mySlides fade">
+            <img
+              src="./images/tamanna-rumee-lpGm415q9JA-unsplash.jpg"
+              style="width: 100%"
+            />
+          </div>
+
+  
+          
+  
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+  
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+      </header>
+
+<!-- main section -->
+<main id="main" >
+
+    <<!-- all categories -->
+<section class="categories">
+    <div class="container">
+      <div class="title-container">
+        <h2 class="title" id="title">men's Shoes</h2>
+      </div>
+      <div class="card">
+        <div class="item-container" id="0">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/1.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">CL LEGACY</h3>
+            <span id="item-price">Price : 1100 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="1">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/2.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">CM997HFKD</h3>
+            <span id="item-price">Price : 900 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="2">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/3.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">REEBOK ROYAL</h3>
+            <span id="item-price">Price : 1200 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="3">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/4.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">COURT DOUBLE</h3>
+            <span id="item-price">Price : 1400 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="4">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/5.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">FUTURE RIDER</h3>
+            <span id="item-price">Price : 1080 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="5">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/6.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">MFCPZBGD</h3>
+            <span id="item-price">Price : 890 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Section break  -->
+  <section class="bannar" id="bannar"></section>
+  
+  <section class="categories">
+    <div class="container">
+      <div class="title-container">
+        <h2 class="title" id="title">women's Shoes</h2>
+      </div>
+      <div class="card">
+        <div class="item-container" id="6">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/7.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">McdfPZBd</h3>
+            <span id="item-price">Price : 1450 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="7">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/8.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">FFFPZBGD</h3>
+            <span id="item-price">Price : 1150 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="8">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/9.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">QURSZBGD</h3>
+            <span id="item-price">Price : 2150 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="9">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/10.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">LSOAABBGD</h3>
+            <span id="item-price">Price : 1780 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="10">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/11.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">NORPZBGD</h3>
+            <span id="item-price">Price : 1780 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div class="item-container" id="11">
+          <div
+            class="card-item"
+            style="
+              background: rgba(0, 0, 0, 0) url('./images/products/12.jpg') repeat
+                scroll 0% 0%;
+            "
+          >
+            <h3 id="item-name">OMDSPGD</h3>
+            <span id="item-price">Price : 2150 EGP</span
+            ><button class="addToCart" id="add-to-cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add To Cart
+            </button>
+          </div>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+   
+</main>
+<!-- end of main -->
+
+
+ <!-- start footer -->
+
+<footer>
+    <div class="container">
+        <div class="foot-Up">
+        <div class="emails">
+            <div class="text">
+            <h1>Get Updates</h1>
+            <p>To stay up to date with our latest news and promotions.</p>
+            </div>
+            <form action="#" target="_blank" method="get">
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your email"
+            />
+            <input type="submit" id="submit" value="sign up " />
+            <br />
+            <div id="chec">
+                <input type="checkbox" />
+                <label for="chec">I have read and agree to the</label>
+                <a href="#" id="anchor">Terms & Conditions</a>
+            </div>
+            </form>
+            <div class="icon">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-snapchat-ghost " aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="list-1">
+            <ul>
+            <li><a href="#">Delivery Information</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div class="list-2">
+            <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Request Return</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="images">
+            <div class="img">
+            <img
+                src="images/icons/App store_whiteadopt lock-up.png"
+                alt="app store"
+            />
+            <img
+                src="images/icons/get-on-google-play.png"
+                alt="google play"
+            />
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="foot-down">
+        <div class="mastercard">
+        <a href="#"
+            ><img src="images/icons/mastercard/857_visa.jpg" alt=""
+        /></a>
+        <a href="#"
+            ><img
+            src="images/icons/mastercard/fast-pay-logo-design-finance-260nw-1669932124.jpg"
+            alt=""
+        /></a>
+        <a href="#"
+            ><img
+            src="images/icons/mastercard/cash-on-delivery-stamp-eps-vectors_csp26317336.jpg"
+            alt=""
+        /></a>
+        <a href="#"
+            ><img
+            src="images/icons/mastercard/png-transparent-mastercard-credit-card-mastercard-logo-mastercard-logo-love-text-heart.png"
+            alt=""
+        /></a>
+        </div>
+        <div class="copy">
+        <p>VAT Registration Number: 310716380200003</p>
+        <p>&copy;2021 All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+
+
+<!-- details page section -->
+<div id="details-page">
+    <div class="details">
+        <div class="items-detail">
+
+            <div class="image-container">
+                <img src="./images/products/1.jpg" alt="" id="details-img">
+                <img src="./images/products/1.jpg" alt="" class="small-img" id="small-img1">
+                <img src="./images/products/1.jpg" alt="" class="small-img" id="small-img2">
+                <img src="./images/products/1.jpg" alt="" class="small-img" id="small-img3">
+            </div>
+            <div class="details-card">
+                <h2 id="detail-title"></h2>
+                <h4 id="detail-price"></h4>
+
+                <p id="delievery"></p>
+                <div id="description"> </div>
+                <button id="carts">Add to Cart</button>
+                <button id="buy">Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of page detail -->
+
+
+<!-- cart list section -->
+<div id="cart-container">
+    <p id="cart-title">Your <strong>Cart</strong></p id="cart-title">
+    <div id="empty-cart">
+        <h1>Your Cart is Empty...</h1>
+    </div>
+
+    <div id="cart-with-items">
+        <div class="cart-column">
+            <h3>Product</h3>
+            <h3>Product Name</h3>
+            <h3>Total </h3>
+            <h3>Quantity</h3>
+            <h3>Remove</h3>
+        </div>
+        <div id="item-body">
+        </div>
+        <div id="total">
+            <h3 id="total-items"></h3>
+            <h2 id="total-amount"></h2>
+            <h3 id="you-saved"></h3>
+        </div>
+    </div>
+</div>
+<script src="./js/main.js"></script>
+<script src="./js/slide.js"></script>
+</body>
+</html>

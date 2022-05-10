@@ -1,0 +1,124 @@
+/* Add special Font */
+@font-face {
+    font-family: myLightFont;
+    src: url(../fonts/FrutigerLTArabic-Light.woff);
+  }
+  @font-face {
+    font-family: myRegularFont;
+    src: url(../fonts/FrutigerLTArabic-Regular.woff);
+  }
+  @font-face {
+    font-family: myBoldFont;
+    src: url(../fonts/FrutigerLTArabic-Bold.woff);
+  }
+  body {
+    font-family: myRegularFont;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+ header{
+   height: 100px !important;
+ }
+
+.productdetails div{
+    background-size: auto;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 150px;
+    background-size: cover !important;
+    box-sizing: border-box;
+    height: 150px;
+    padding: 50px;
+    float: left;
+    margin: 0px 25px 50px;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+.productdetails div img{
+  width: 150px;
+  height: 150px;
+}
+#slider{
+    width:350px;
+    margin-left:50px;
+    margin-top: 50px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#slider img{
+    width:100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#divTitle{
+    margin-left: 650px;
+    margin-top:-500px
+    
+}
+
+#divTitle h1{
+    margin-top: 50px;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-family: myBoldFont;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#divPrice{
+    margin-left: 650px;
+    
+}
+
+#divPrice p{
+    font-size: 30px;
+    font-style: bold;
+    color: rgb(182, 24, 3);
+    font-family: myBoldFont;
+}
+#divButton button{
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 400px;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0 0 3px 3px;
+    border: none;
+    outline: none;
+    margin-left: 650px;
+    cursor: pointer;
+}
+#divButton button i {
+    font-size: 20px;
+    margin-right: 5px;
+    background-color: grey;
+    border: none;
+    cursor: pointer;
+  }
+
+  #divButton :hover{
+    background-color: rgba(141, 13, 13, 0.541);
+  }
+  #divDesc{
+   width: 400px;
+    margin-left: 650px;
+   border-top: 2px bold black;
+    text-align:center;
+    background-color:lightgray
+    
+}
+#divDesc p{
+  font-size: 15px;
+  font-style: bold;
+  color: rgb(100, 16, 4);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  -ms-grid-row-align: center;
+  padding: 15px;
+}

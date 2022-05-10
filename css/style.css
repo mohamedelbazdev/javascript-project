@@ -1,0 +1,374 @@
+/* start header */
+header {
+  width: 100%;
+  height: 100vh;
+}
+header .head-UP {
+  width: 100%;
+  height: 30px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 101;
+}
+header .head-UP .left {
+  width: 13%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+}
+header .head-UP .left .img-head img {
+  width: 30px;
+  border: 1px solid white;
+}
+header .head-UP .left .img-head ul {
+  display: none;
+  position: absolute;
+  left: 5px;
+  background-color: #ddd;
+  margin: 0;
+  padding: 10px 5px;
+  min-width: 100px;
+  z-index: 1;
+  color: #000;
+}
+header .head-UP .left .img-head ul li a {
+  padding: 5px;
+}
+header .head-UP .left .img-head:hover ul {
+  display: block;
+}
+header .head-UP .left .img-head:hover ul li:hover {
+  background-color: #555;
+}
+header .head-UP .left .img-head ul li {
+  padding-top: 5px;
+}
+header .head-UP .left .leng ul {
+  display: none;
+  position: absolute;
+  background-color: #eee;
+  margin: 0;
+  padding: 10px 5px;
+  min-width: 120px;
+}
+header .head-UP .left .leng a {
+  color: #fff;
+}
+header .head-UP .left .leng a:hover {
+  color: brown;
+}
+header .head-UP .left .leng ul a {
+  color: #000;
+}
+header .head-UP .left .leng ul a:hover li {
+  background-color: #555;
+  color: #fff;
+}
+header .head-UP .left .leng ul a:not(:last-child) li {
+  border-bottom: 1px solid #999;
+}
+header .head-UP .left .leng:hover ul {
+  display: block;
+}
+header .head-UP .rihgt {
+  width: 50%;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+}
+header .head-UP .rihgt a:hover {
+  color: brown;
+}
+/* nav */
+
+nav .navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 100;
+  position: fixed;
+  top: 30px;
+}
+nav .navbar .list {
+  width: calc((100% - 120px) / 3);
+}
+nav .navbar .list ul {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+}
+nav .navbar .list ul li a {
+  color: #000;
+}
+nav .navbar .list ul li a:hover {
+  color: #555;
+}
+nav .navbar .logo {
+  margin-left: -250px;
+}
+nav .navbar .logo img {
+  width: 200px;
+}
+nav .navbar .icon-nav {
+  margin-right: 20px;
+}
+nav .navbar .icon-nav i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #000;
+}
+nav .navbar .icon-nav .login {
+  display: inline-block;
+}
+nav .navbar .icon-nav ul {
+  display: none;
+  background-color: #ddd;
+  position: absolute;
+  right: 60px;
+  min-width: 90px;
+  margin: 0;
+  padding: 10px 5px;
+  z-index: 10;
+}
+nav .navbar .icon-nav .login:hover ul {
+  display: block;
+}
+nav .navbar .icon-nav ul a {
+  color: #000;
+}
+nav .navbar .icon-nav ul a:hover li {
+  background-color: #555;
+}
+
+/* end header */
+
+/* Category Title */
+.categories h2 {
+  margin-top: 50px;
+  font-size: 40px;
+  text-transform: capitalize;
+  font-family: myBoldFont;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Category Title Underline */
+.categories h2::after {
+  content: "";
+  width: 70px;
+  height: 5px;
+  background-color: rgb(233, 107, 3);
+  display: block;
+}
+
+/* Product Card -Grid- */
+
+.card .card-item {
+  background-size: auto;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  width: 397px;
+  background-size: cover !important;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 50px;
+  float: left;
+  margin: 0px 25px 50px;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Product Title */
+.card div h3 {
+  font-size: 24px;
+  font-family: myBoldFont;
+}
+
+/* Product Price */
+.card div span {
+  font-size: 18px;
+  font-style: italic;
+  color: rgb(182, 83, 3);
+  font-family: myBoldFont;
+}
+
+.card div:hover button {
+  visibility: visible;
+}
+
+/* Button Add To Cart */
+.card div button {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.541);
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 0 0 3px 3px;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+/* Fort Awsome Icon */
+.card div button i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.bannar {
+  background: url("../images/bg00.png") no-repeat fixed;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+}
+
+/*start footer  */
+footer {
+  height: auto;
+  background-color: #000;
+  padding: 50px 0;
+}
+footer .container .foot-Up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  color: #949494;
+  margin-bottom: 20px;
+}
+.foot-Up .emails {
+  width: calc((100% - 120px) / 4);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  gap: 30px;
+}
+.foot-Up .emails .text h1 {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+.foot-Up .emails form input[type="email"] {
+  width: 270px;
+  height: 55px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  outline: none;
+}
+.foot-Up .emails form input:nth-child(2) {
+  height: 58px;
+  width: 80px;
+  background-color: #fff;
+  margin-left: -85px;
+}
+.foot-Up .emails form input:nth-child(2):hover {
+  background-color: tomato;
+}
+.foot-Up .emails form #chec {
+  width: 300px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.foot-Up .emails form #chec a {
+  text-decoration: underline;
+  color: rgb(90, 89, 89);
+}
+.foot-Up .emails form #chec a:hover {
+  color: red;
+}
+.foot-Up .emails .icon {
+  font-size: 20px;
+  margin-left: 20px;
+}
+.foot-Up .emails .icon a i {
+  background-color: rgb(70, 69, 69);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+.foot-Up .emails .icon a i:hover {
+  background-color: rgb(167, 167, 167);
+}
+.foot-Up .list-1 li,
+.foot-Up .list-2 li {
+  margin-top: -50px;
+  margin-bottom: 60px;
+}
+.foot-Up .images .img {
+  width: 200px;
+  margin-top: -40px;
+}
+.foot-Up .images .img img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+footer .foot-down .mastercard {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+footer .foot-down .mastercard img {
+  width: 40px;
+  margin-left: 30px;
+}
+footer .foot-down .copy {
+  color: #fff;
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  color: #949494;
+}
+
+/*end footer  */
+
+/* product details */
+.details-container {
+  min-width: 100%;
+  min-height: 100%;
+  background: #0000004d;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.details-container .product-details {
+  width: 80%;
+  height: 75%;
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
