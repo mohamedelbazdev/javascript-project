@@ -257,7 +257,7 @@ function addToCart(id) {
   data[id].itemInCart = true;
 }
 
-//back to main page
+//back to main pageF
 function refreshPage() {
   detailsPage.style.display = "none";
 }
@@ -290,7 +290,6 @@ var totalSaving;
 function addItem() {
   totalAmount = 0;
   totalItems = 0;
-  totalSaving = 0;
 
   var clrNode = document.getElementById("item-body");
   clrNode.innerHTML = "";
@@ -298,7 +297,6 @@ function addItem() {
   cartList.map((cart) => {
     var cartCont = document.getElementById("item-body");
     totalAmount = totalAmount + cart.price;
-    totalSaving = totalSaving + cart.save;
     totalItems = totalItems + 1;
 
     var tempCart = document.createElement("div");
@@ -307,12 +305,12 @@ function addItem() {
 
     var listImg = document.createElement("img");
     listImg.setAttribute("id", "list-img");
-    listImg.src = cart.img;
+    listImg.src = "./images/products/" + cart.img;
     tempCart.appendChild(listImg);
 
     var listName = document.createElement("h3");
     listName.setAttribute("class", "list-name");
-    listName.innerHTML = cart.name;
+    listName.innerHTML = cart.productName;
     tempCart.appendChild(listName);
 
     var listPay = document.createElement("h3");
@@ -336,8 +334,6 @@ function addItem() {
     "Total Amount : $ " + totalAmount;
   document.getElementById("total-items").innerHTML =
     "Total Items : " + totalItems;
-  document.getElementById("you-saved").innerHTML =
-    "You Saved : $ " + totalSaving;
   document.getElementById("total").style.display = "block";
 }
 
