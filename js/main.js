@@ -350,6 +350,21 @@ function removeFromCart(itemId) {
     document.getElementById("cart-with-items").style.display = "none";
     document.getElementById("empty-cart").style.display = "block";
   }
+
+  if(cartList.length-1 != null){
+    let productNumbers = localStorage.getItem('cartNumbers');
+    productNumbers = parseInt(productNumbers);
+    if(productNumbers){
+      localStorage.setItem('cartNumbers',productNumbers-1);
+      document.querySelector('.counterItem').textContent = productNumbers-1;
+    }else{
+  
+    localStorage.setItem('cartNumbers',1);
+  
+    console.log(document.querySelector('.counterItem'));
+    document.querySelector('.counterItem').textContent = 1;
+  }
+  }
 }
 
 function cartCounter(){
