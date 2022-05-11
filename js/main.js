@@ -217,7 +217,9 @@ var getId;
 
 //click events to add items to cart from home page cart icon
 addToCarts.forEach((val) =>
-  val.addEventListener("click", () => addToCart(val.parentNode.id))
+  val.addEventListener("click", function () {
+    addToCart(val.parentNode.id);
+  })
 );
 
 // details function
@@ -234,13 +236,13 @@ function handleDetail(e) {
   detailDesc.innerHTML = "<h2>Description</h2> " + data[getId].Desc;
 }
 
-smallImg1.addEventListener("click", () => {
+smallImg1.addEventListener("click", function () {
   detailsImg.src = "../images/products/" + data[getId].img;
 });
-smallImg2.addEventListener("click", () => {
+smallImg2.addEventListener("click", function () {
   detailsImg.src = "../images/products/" + data[getId].img_2;
 });
-smallImg3.addEventListener("click", () => {
+smallImg3.addEventListener("click", function () {
   detailsImg.src = "../images/products/" + data[getId].img_3;
 });
 
@@ -259,7 +261,7 @@ function addToCart(id) {
   data[id].itemInCart = true;
 }
 
-//back to main page
+//back to main pageF
 function refreshPage() {
   detailsPage.style.display = "none";
 }
@@ -292,7 +294,6 @@ var totalSaving;
 function addItem() {
   totalAmount = 0;
   totalItems = 0;
-  totalSaving = 0;
 
   var clrNode = document.getElementById("item-body");
   clrNode.innerHTML = "";
@@ -300,7 +301,6 @@ function addItem() {
   cartList.map((cart) => {
     var cartCont = document.getElementById("item-body");
     totalAmount = totalAmount + cart.price;
-    totalSaving = totalSaving + cart.save;
     totalItems = totalItems + 1;
 
     var tempCart = document.createElement("div");
@@ -309,17 +309,17 @@ function addItem() {
 
     var listImg = document.createElement("img");
     listImg.setAttribute("id", "list-img");
-    listImg.src = cart.img;
+    listImg.src = "./images/products/" + cart.img;
     tempCart.appendChild(listImg);
 
     var listName = document.createElement("h3");
     listName.setAttribute("class", "list-name");
-    listName.innerHTML = cart.name;
+    listName.innerHTML = cart.productName;
     tempCart.appendChild(listName);
 
     var listPay = document.createElement("h3");
     listPay.setAttribute("class", "pay");
-    listPay.innerHTML = cart.price;
+    listPay.innerHTML = cart.price + " EGP";
     tempCart.appendChild(listPay);
 
     var listQuantity = document.createElement("h3");
@@ -335,11 +335,9 @@ function addItem() {
     cartCont.appendChild(tempCart);
   });
   document.getElementById("total-amount").innerHTML =
-    "Total Amount : $ " + totalAmount;
+    "Total Amount : " + totalAmount + " EGP";
   document.getElementById("total-items").innerHTML =
     "Total Items : " + totalItems;
-  document.getElementById("you-saved").innerHTML =
-    "You Saved : $ " + totalSaving;
   document.getElementById("total").style.display = "block";
 }
 
