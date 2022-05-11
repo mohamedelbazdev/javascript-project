@@ -217,7 +217,9 @@ var getId;
 
 //click events to add items to cart from home page cart icon
 addToCarts.forEach((val) =>
-  val.addEventListener("click", () => addToCart(val.parentNode.id))
+  val.addEventListener("click", function () {
+    addToCart(val.parentNode.id);
+  })
 );
 
 // details function
@@ -234,13 +236,13 @@ function handleDetail(e) {
   detailDesc.innerHTML = "<h2>Description</h2> " + data[getId].Desc;
 }
 
-smallImg1.addEventListener("click", () => {
+smallImg1.addEventListener("click", function () {
   detailsImg.src = "../images/products/" + data[getId].img;
 });
-smallImg2.addEventListener("click", () => {
+smallImg2.addEventListener("click", function () {
   detailsImg.src = "../images/products/" + data[getId].img_2;
 });
-smallImg3.addEventListener("click", () => {
+smallImg3.addEventListener("click", function () {
   detailsImg.src = "../images/products/" + data[getId].img_3;
 });
 
@@ -315,7 +317,7 @@ function addItem() {
 
     var listPay = document.createElement("h3");
     listPay.setAttribute("class", "pay");
-    listPay.innerHTML = cart.price;
+    listPay.innerHTML = cart.price + " EGP";
     tempCart.appendChild(listPay);
 
     var listQuantity = document.createElement("h3");
@@ -331,7 +333,7 @@ function addItem() {
     cartCont.appendChild(tempCart);
   });
   document.getElementById("total-amount").innerHTML =
-    "Total Amount : $ " + totalAmount;
+    "Total Amount : " + totalAmount + " EGP";
   document.getElementById("total-items").innerHTML =
     "Total Items : " + totalItems;
   document.getElementById("total").style.display = "block";
