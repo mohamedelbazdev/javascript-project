@@ -60,7 +60,6 @@ a {
 }
 #cart {
   position: relative;
-  top: -5px;
 }
 #bars {
   padding: 0 10px;
@@ -261,16 +260,19 @@ a {
   min-height: 975px;
 }
 #cart-title {
-  font-size: 3.5rem;
+  font-size: 50px;
   text-align: center;
   font-family: sans-serif;
-  color: rgb(146, 78, 78);
+  color: rgb(2, 133, 13);
+  margin-top: 25px;
 }
 #empty-cart {
   display: none;
   margin-top: 4rem;
   text-align: center;
-  font-size: larger;
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
 }
 
 #cart-with-items {
@@ -282,6 +284,7 @@ a {
   display: grid;
   padding: 1rem;
   grid-template-columns: repeat(5, 1fr);
+  background: #efefef;
 }
 .cart-list {
   display: grid;
@@ -290,6 +293,9 @@ a {
   position: relative;
   padding: 0.5rem 1rem;
   background: white;
+  border: 1px solid #efefef;
+  padding: 20px;
+  margin: 0 auto;
 }
 .list-name,
 .pay,
@@ -314,4 +320,16 @@ a {
   color: rgb(149, 51, 34);
   letter-spacing: 0.1rem;
   margin-bottom: 1.5rem;
+}
+
+#btnBack {
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #333;
+  border: 1px solid #333;
+  margin: 20px 0 0 15px;
+  border-radius: 3px;
 }

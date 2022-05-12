@@ -6,8 +6,6 @@ const data = [
     img: "1.jpg",
     img_2: "01.jpg",
     img_3: "001.jpg",
-    productLink: "1.html",
-    quantity: 10,
     delievery: "In 3 - 4 days",
     category: "men's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -20,8 +18,7 @@ const data = [
     img: "2.jpg",
     img_2: "02.jpg",
     img_3: "002.jpg",
-    productLink: "2.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "men's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -34,8 +31,7 @@ const data = [
     img: "3.jpg",
     img_2: "03.jpg",
     img_3: "003.jpg",
-    productLink: "3.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "men's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -48,8 +44,7 @@ const data = [
     img: "4.jpg",
     img_2: "04.jpg",
     img_3: "004.jpg",
-    productLink: "4.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "men's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -62,8 +57,7 @@ const data = [
     img: "5.jpg",
     img_2: "05.png",
     img_3: "005.jpg",
-    productLink: "5.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "men's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -76,8 +70,7 @@ const data = [
     img: "6.jpg",
     img_2: "06.jpg",
     img_3: "006.jpg",
-    productLink: "6.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "men's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -90,8 +83,7 @@ const data = [
     img: "7.jpg",
     img_2: "07.jpg",
     img_3: "007.jpg",
-    productLink: "6.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "women's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -104,8 +96,7 @@ const data = [
     img: "8.jpg",
     img_2: "08.jpg",
     img_3: "008.jpg",
-    productLink: "6.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "women's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -118,8 +109,7 @@ const data = [
     img: "9.jpg",
     img_2: "09.jpg",
     img_3: "009.jpg",
-    productLink: "6.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "women's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -132,8 +122,7 @@ const data = [
     img: "10.jpg",
     img_2: "010.jpg",
     img_3: "0010.jpg",
-    productLink: "6.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "women's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -146,8 +135,7 @@ const data = [
     img: "11.jpg",
     img_2: "011.jpg",
     img_3: "0011.jpg",
-    productLink: "6.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "women's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -160,8 +148,7 @@ const data = [
     img: "12.jpg",
     img_2: "012.jpg",
     img_3: "0012.jpg",
-    productLink: "6.html",
-    quantity: 10,
+
     delievery: "In 3 - 4 days",
     category: "women's Shoes",
     Desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus, cum quam suscipit veritatis nulla.",
@@ -186,6 +173,7 @@ var back = document.getElementById("buy");
 back.addEventListener("click", refreshPage);
 var addToCarts = document.querySelectorAll("#add-to-cart");
 var cart = document.getElementById("cart");
+var btnBack = document.getElementById("btnBack");
 
 // click event to display cart page
 cart.addEventListener("click", displayCart);
@@ -199,6 +187,7 @@ var home = document.getElementById("logo");
 
 //click event to hide cart page and return to home page
 home.addEventListener("click", hideCart);
+btnBack.addEventListener("click", hideCart);
 
 //events on dynamically created element to remove items from list
 document.addEventListener("click", function (e) {
@@ -254,7 +243,6 @@ function addToCart(id) {
     cartCounter();
 
     alert("item added to your cart");
-
   } else {
     alert("your item is already there");
   }
@@ -288,7 +276,6 @@ function displayCart() {
 
 var totalAmount;
 var totalItems;
-var totalSaving;
 
 //add item to the cart
 function addItem() {
@@ -351,52 +338,38 @@ function removeFromCart(itemId) {
     document.getElementById("empty-cart").style.display = "block";
   }
 
-  if(cartList.length-1 != null){
-    let productNumbers = localStorage.getItem('cartNumbers');
+  if (cartList.length - 1 != null) {
+    let productNumbers = localStorage.getItem("cartNumbers");
     productNumbers = parseInt(productNumbers);
-    if(productNumbers){
-      localStorage.setItem('cartNumbers',productNumbers-1);
-      document.querySelector('.counterItem').textContent = productNumbers-1;
-    }else{
-  
-    localStorage.setItem('cartNumbers',1);
-  
-    console.log(document.querySelector('.counterItem'));
-    document.querySelector('.counterItem').textContent = 1;
-  }
+    if (productNumbers) {
+      localStorage.setItem("cartNumbers", productNumbers - 1);
+      document.querySelector(".counterItem").textContent = productNumbers - 1;
+    } else {
+      localStorage.setItem("cartNumbers", 1);
+
+      console.log(document.querySelector(".counterItem"));
+      document.querySelector(".counterItem").textContent = 1;
+    }
   }
 }
 
-function cartCounter(){
+function cartCounter() {
+  let productNumbers = localStorage.getItem("cartNumbers");
+  productNumbers = parseInt(productNumbers);
+  if (productNumbers) {
+    localStorage.setItem("cartNumbers", productNumbers + 1);
+    document.querySelector(".counterItem").textContent = productNumbers + 1;
+  } else {
+    localStorage.setItem("cartNumbers", 1);
 
-	let productNumbers = localStorage.getItem('cartNumbers');
-	productNumbers = parseInt(productNumbers);
-	if(productNumbers){
-		localStorage.setItem('cartNumbers',productNumbers+1);
-		document.querySelector('.counterItem').textContent = productNumbers+1;
-	}else{
-
-	localStorage.setItem('cartNumbers',1);
-
-	console.log(document.querySelector('.counterItem'));
-	document.querySelector('.counterItem').textContent = 1;
-}
+    console.log(document.querySelector(".counterItem"));
+    document.querySelector(".counterItem").textContent = 1;
+  }
 }
 //functio to load data when the page loads
-function onloadCartNumbers(){
-	let productNumbers = localStorage.getItem('cartNumbers');
-	document.querySelector('.counterItem').textContent = productNumbers;
+function onloadCartNumbers() {
+  let productNumbers = localStorage.getItem("cartNumbers");
+  document.querySelector(".counterItem").textContent = productNumbers;
 }
 
 onloadCartNumbers();
-
-
-
-
-
-
-
-
-
-
-
